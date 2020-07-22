@@ -2,6 +2,7 @@
 * https://material.io/design/color/dark-theme.html
 */
 #keyboard {
+  display: inline-block;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -9,4 +10,13 @@
   transform: translate(-50%, -50%);
   width: 1000px;
   height: 375px;
+}
+
+.pianoKey {
+  display: inline-block;
+  height: 95%;
+  width: 2.25%;
+  border-color: #BB86FC;
+  border-style: solid;
+  border-width: 2px;
 }

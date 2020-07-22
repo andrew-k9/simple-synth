@@ -4,10 +4,14 @@
 const KEYBOARD_STATE = {
   gainValue: null,
   stopTime: null,
+  octaves: null,
+  A: null,
 
   init: function(){
     this.gainValue = 0.05;
     this.stopTime = 256;
+    this.octaves = 3;
+    this.A = 440;
     return this;
   },
 
