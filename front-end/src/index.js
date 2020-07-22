@@ -11,13 +11,15 @@ const noise = (event) => {
   context = null;
 }
 
-const addKey = () => {
-  const key = document.createElement('div');
-  key.id = 'keyboard';
-  key.addEventListener('click', noise);
-  document.body.appendChild(key);
+const addKeyboard = () => {
+  const keyboard = document.createElement('div');
+  keyboard.id = 'keyboard';
+  keyboard.className = 'primary';
+
+  keyboard.addEventListener('click', noise);
+  document.body.appendChild(keyboard);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  addKey();
+  addKeyboard();
 });

@@ -1,0 +1,27 @@
+/**************************
+* Main Page Colors
+***************************/
+.primary {
+  background-color: #BB86FC;
+}
+.primaryVariant {
+  background-color: #3700B3;
+}
+.secondary {
+  background-color: #03DAC6;
+}
+.background {
+  background-color: #121212;
+}
+.error {
+  background-color: #CF6679;
+}
+/**************************
+* Keyboard Colors
+***************************/
+.blackKeys {
+  background-color: black;
+}
+.whiteKeys {
+  background-color: white;
+}
