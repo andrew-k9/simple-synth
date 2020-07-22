@@ -1,25 +1,16 @@
-const noise = (event) => {
-  let context = new AudioContext();
-  const oscillator = context.createOscillator();
-  const gain = context.createGain();
-
-  oscillator.connect(gain);
-  gain.connect(context.destination);
-  gain.gain.value = 0.05;
-  oscillator.start(0);
-  setTimeout( () => oscillator.stop(), 256);
-  context = null;
+/**
+ * Function that appends an html element identified by the given targetId
+ *
+ * @param {HTMLElement} component The component created off of some data
+ * @param {string} targetId The id of the element in which the component will be rendered
+ */
+const render = (component, targetId) => {
+  const target = document.getElementById(targetId);
+  target.appendChild(component);
 }
 
-const addKeyboard = () => {
-  const keyboard = document.createElement('div');
-  keyboard.id = 'keyboard';
-  keyboard.className = 'primary';
-
-  keyboard.addEventListener('click', noise);
-  document.body.appendChild(keyboard);
-}
-
+// sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
+  KEYBOARD_STATE.init();
   addKeyboard();
 });
