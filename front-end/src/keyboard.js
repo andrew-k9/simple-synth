@@ -26,9 +26,10 @@ const Keyboard = ({id, classes}) => {
  */
 const Key = ({id, classes, frequency}) => {
   const component = document.createElement('div');
+  const context = new AudioContext(); // putting this in playNote created a memory issue!
   component.id = id;
   component.classList.add(...classes);
-  component.addEventListener('click', playNote(frequency));
+  component.addEventListener('click', playNote(context, frequency));
   return component;
 }
 
@@ -61,20 +62,20 @@ const addKeyboard = () => {
  * @params {HTMLEvent} the event that invoked the function
  * @returns {function} anon function that actually creates the audio context;
  */
-const playNote = (frequency) => function(event) {
-  let context = new AudioContext();
-  let oscillator = context.createOscillator();
-  let gain = context.createGain();
+const playNote = (context, frequency) => function(event) {
+  context.resume()
+    .then(() => {
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
 
-  console.log({frequency})
+      console.log({frequency})
 
-  oscillator.connect(gain);
-  oscillator.frequency.value = frequency;
-  gain.connect(context.destination);
-  gain.gain.value = KEYBOARD_STATE.gainValue;
-  oscillator.start(0);
-  setTimeout( () => oscillator.stop(), KEYBOARD_STATE.stopTime);
-  context = null;
-  oscillator = null;
-  gain = null;
+      oscillator.connect(gain);
+      oscillator.frequency.value = frequency;
+      gain.connect(context.destination);
+      gain.gain.value = KEYBOARD_STATE.gainValue;
+      oscillator.start(0);
+      setTimeout( () => oscillator.stop(), KEYBOARD_STATE.stopTime);
+    })
+    .catch( err => console.log({err, context, frequency, event}));
 }

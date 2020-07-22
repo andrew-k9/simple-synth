@@ -10,7 +10,7 @@ const KEYBOARD_STATE = {
   init: function(){
     this.gainValue = 0.05;
     this.stopTime = 256;
-    this.octaves = 3;
+    this.octaves = 2;
     this.A = 440;
     return this;
   },
