@@ -901,3 +901,13 @@ Processing by SettingsController#index as HTML
 Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 10499)
 
 
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 17:06:44 -0400
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>{}}
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1764)
+
+
