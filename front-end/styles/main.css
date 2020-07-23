@@ -1,14 +1,31 @@
 /*
 * https://material.io/design/color/dark-theme.html
 */
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: space-around;
+}
+
 #keyboard {
+  padding: 5px;
   display: flex;
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
   width: 80%;
+  height: 250px;
+}
+
+#settings {
+  margin: auto;
+  display: flex;
+  top: 50%;
+  width: 75%;
   height: 43%;
 }
 
@@ -19,4 +36,10 @@
   border-color: #BB86FC;
   border-style: solid;
   border-width: 2px;
+}
+
+.settings-panel {
+  flex: 1;
+  height: 50px;
+  width: 33.33%;
 }

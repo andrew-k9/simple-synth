@@ -9,8 +9,10 @@ const render = (component, targetId) => {
   target.appendChild(component);
 }
 
+// TODO: make the functions that generate components into a generic function
 // sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
   KEYBOARD_STATE.init();
+  addSynthSettings();
   addKeyboard();
 });

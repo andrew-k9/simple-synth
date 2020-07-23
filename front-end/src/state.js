@@ -10,7 +10,7 @@ const KEYBOARD_STATE = {
   init: function(){
     this.gainValue = 0.05;
     this.stopTime = 256;
-    this.octaves = 2;
+    this.octaves = 3;
     this.A = 440;
     return this;
   },
@@ -23,6 +23,11 @@ const KEYBOARD_STATE = {
         throw new Error(`State has no key ${key} in ${params} for ${this}`);
       }
     }
+  },
+
+  getValues: function(){
+    const keys = Object.keys(this);
+    return keys.filter( key => typeof this[key] !== 'function');
   }
 
 };
