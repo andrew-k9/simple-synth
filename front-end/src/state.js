@@ -17,6 +17,7 @@ const KEYBOARD_STATE = {
 
   update: function(params){
     for(const key in params){
+      console.log({key, params})
       if(this.hasOwnProperty(key)){
         this[key] = params[key];
       } else {

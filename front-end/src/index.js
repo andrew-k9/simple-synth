@@ -1,3 +1,4 @@
+const keyboardDiv = () => document.getElementById('keyboard');
 /**
  * Function that appends an html element identified by the given targetId
  *

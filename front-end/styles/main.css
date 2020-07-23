@@ -2,6 +2,10 @@
 * https://material.io/design/color/dark-theme.html
 */
 
+textarea {
+  resize: none;
+}
+
 #main {
   display: flex;
   flex-direction: column;
@@ -24,6 +28,7 @@
 #settings {
   margin: auto;
   display: flex;
+  flex-direction: row;
   top: 50%;
   width: 75%;
   height: 43%;

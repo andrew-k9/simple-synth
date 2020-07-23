@@ -26,12 +26,23 @@ const SettingsPanel = (prop) => {
   textField.addEventListener('keydown', updateState(prop));
   component.id = prop;
   component.className = 'settings-panel';
+  component.innerHTML = `<p class="label">${prop}</p>`;
   component.appendChild(textField);
   return component;
 }
 
 const updateState = (prop) => (event) => {
-  console.log({prop, event})
+  if(event.code === 'Enter'){
+    console.log(prop)
+    const state = KEYBOARD_STATE;
+    const tmp = {};
+    tmp[prop] = parseFloat(event.target.value);
+    state.update(tmp); // TODO: validation
+    if(prop === 'octaves'){
+      document.body.removeChild(keyboardDiv());
+      addKeyboard();
+    }
+  }
 }
 
 /**

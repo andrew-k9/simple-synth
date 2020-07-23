@@ -45,7 +45,7 @@ const addKeyboard = () => {
   });
 
   // adds keyboard keys for the number of octaves
-  for(let i = 0; i < 13 * octaves - 1; ++i){
+  for(let i = 0; i < 12 * octaves + 1; ++i){
     const frequency = noteFrequency(A, i + 4); // starts at C!
     const noteColor = (isSharp(i % 12) ? 'black' : 'white') + 'Keys';
     const key = Key({
@@ -69,14 +69,16 @@ const playNote = (context, frequency) => function(event) {
 
       const oscillator = context.createOscillator();
       const gain = context.createGain();
-      // console.log({frequency});
+      const {gainValue, stopTime} = KEYBOARD_STATE;
+
+      console.log(KEYBOARD_STATE);
 
       oscillator.connect(gain);
       oscillator.frequency.value = frequency;
       gain.connect(context.destination);
-      gain.gain.value = KEYBOARD_STATE.gainValue;
+      gain.gain.value = gainValue;
       oscillator.start(0);
-      setTimeout( () => oscillator.stop(), KEYBOARD_STATE.stopTime);
+      setTimeout( () => oscillator.stop(), stopTime);
     })
     .catch( err => console.log({err, context, frequency, event}));
 }
