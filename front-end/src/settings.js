@@ -33,15 +33,14 @@ const SettingsPanel = (prop) => {
 
 const updateState = (prop) => (event) => {
   if(event.code === 'Enter'){
+    event.preventDefault();
     console.log(prop)
     const state = KEYBOARD_STATE;
     const tmp = {};
     tmp[prop] = parseFloat(event.target.value);
     state.update(tmp); // TODO: validation
-    if(prop === 'octaves'){
-      document.body.removeChild(keyboardDiv());
-      addKeyboard();
-    }
+    document.body.removeChild(keyboardDiv());
+    addKeyboard(); // redraw the keyboard with the given state settings
   }
 }
 

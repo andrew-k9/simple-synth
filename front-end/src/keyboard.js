@@ -71,8 +71,6 @@ const playNote = (context, frequency) => function(event) {
       const gain = context.createGain();
       const {gainValue, stopTime} = KEYBOARD_STATE;
 
-      console.log(KEYBOARD_STATE);
-
       oscillator.connect(gain);
       oscillator.frequency.value = frequency;
       gain.connect(context.destination);
