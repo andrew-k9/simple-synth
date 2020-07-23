@@ -464,3 +464,440 @@ Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 146)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mSetting Create (0.7ms)[0m  [1m[32mINSERT INTO "settings" ("name", "gain", "stop_time", "a_frequency", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Default"], ["gain", 0.05], ["stop_time", 350.0], ["a_frequency", 440.0], ["category_id", 5], ["created_at", "2020-07-23 20:05:13.505102"], ["updated_at", "2020-07-23 20:05:13.505102"]]
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:12:32 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/andrew.kloecker/Power/PCA/projects/simple-synth/synth-server/app/controllers/settings_controller.rb:4: syntax error, unexpected ':', expecting end
+    render: json: cat, include: %i[name ...
+          ^):
+  
+app/controllers/settings_controller.rb:4: syntax error, unexpected ':', expecting end
+app/controllers/settings_controller.rb:4: syntax error, unexpected ':', expecting end
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:13:19 -0400
+  
+SyntaxError (/Users/andrew.kloecker/Power/PCA/projects/simple-synth/synth-server/app/controllers/settings_controller.rb:4: syntax error, unexpected ':', expecting end
+    render: json: cat, include: [:name, ...
+          ^):
+  
+app/controllers/settings_controller.rb:4: syntax error, unexpected ':', expecting end
+app/controllers/settings_controller.rb:4: syntax error, unexpected ':', expecting end
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:13:49 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.7ms | Allocations: 6077)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Lead":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:13:49 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1898)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Lead":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:14:54 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.7ms | Allocations: 5107)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Lead":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:15:45 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.1ms | Allocations: 7928)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:16:08 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.6ms | Allocations: 7425)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:08 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.7ms | Allocations: 7498)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:09 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:09 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:10 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:10 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:10 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:10 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:11 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:11 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:11 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:12 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:12 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:12 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:12 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:13 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:13 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:13 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:13 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:14 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:14 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:14 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:14 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:18:15 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1646)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Default":String):
+  
+app/controllers/settings_controller.rb:4:in `index'
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:21:03 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 4.9ms | Allocations: 12791)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:21:33 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 11014)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:22:34 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 5.3ms | Allocations: 10736)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:22:35 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1536)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:23:06 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 10826)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:24:02 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 4.6ms | Allocations: 10785)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-23 16:24:05 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 7555)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-23 16:26:29 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 5.2ms | Allocations: 14439)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:26:36 -0400
+  
+SyntaxError (/Users/andrew.kloecker/Power/PCA/projects/simple-synth/synth-server/app/controllers/settings_controller.rb:22: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/settings_controller.rb:22: syntax error, unexpected end-of-input, expecting end
+app/controllers/settings_controller.rb:22: syntax error, unexpected end-of-input, expecting end
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:26:47 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 10877)
+
+
+Started GET "/settings" for 127.0.0.1 at 2020-07-23 16:33:25 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 10499)
+
+
