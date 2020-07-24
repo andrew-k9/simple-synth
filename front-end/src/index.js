@@ -16,4 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   KEYBOARD_STATE.init();
   addSynthSettings();
   addKeyboard();
+  req({
+    routeName: 'settings',
+    type: 'GET',
+    callback: console.log
+  });
 });
