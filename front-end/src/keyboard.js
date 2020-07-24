@@ -60,7 +60,8 @@ const addKeyboard = () => {
 
 /**
  * Event Listener that makes a noise using the KEYBOARD_STATE object
- * @params {HTMLEvent} the event that invoked the function
+ * @params {AudioContext} context - the audio context of the key
+ * @params {number} frequency - the audio context of the key
  * @returns {function} anon function that interprets an audio context promise;
  */
 const playNote = (context, frequency) => function(event) {

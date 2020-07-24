@@ -9,7 +9,13 @@
     <script type="application/javascript" src="./src/settings.js" charset="UTF-8"></script>
     <script type="application/javascript" src="./src/keyboard.js" charset="UTF-8"></script>
     <script type="application/javascript" src="./src/server.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="./src/sideMenu.js" charset="UTF-8"></script>
     <title>Simple Synth</title>
   </head>
-  <body id="main" class="background"></body>
+  <body id="main" class="background">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  </body>
 </html>
