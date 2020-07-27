@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   addSynthSettings();
   addKeyboard();
   addSideMenu();
+  modal();
 });

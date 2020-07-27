@@ -1527,3 +1527,309 @@ Processing by SettingsController#show as */*
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 731)
 
 
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:14:31 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 5363)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:19:19 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:19:29 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:20:44 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:21:53 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:22:33 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:29:14 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 3.5ms | Allocations: 5363)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:30:04 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:30:38 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:31:27 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:31:38 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5255)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:33:14 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:33:32 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:33:58 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:34:26 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:34:41 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5253)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-07-27 09:35:02 -0400
+Processing by CategoriesController#index as */*
+  Parameters: {"category"=>{}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 5253)
+
+

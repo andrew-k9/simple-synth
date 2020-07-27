@@ -1,31 +1,3 @@
-// [
-//   {
-//   "name": "Lead",
-//   "settings": []
-//   },
-//   {
-//   "name": "Background",
-//   "settings": []
-//   },
-//   {
-//   "name": "Electronic",
-//   "settings": []
-//   },
-//   {
-//   "name": "80's",
-//   "settings": []
-//   },
-//   {
-//   "name": "Other",
-//   "settings": [
-//      {
-//        "id": 1,
-//        "name": "Default"
-//      }
-//    ]
-//   }
-// ]
-
 const openNav = () => document.getElementById("mySidenav").style.width = "250px";
 const closeNav = () => document.getElementById("mySidenav").style.width = "0";
 
