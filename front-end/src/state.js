@@ -16,19 +16,28 @@ const KEYBOARD_STATE = {
   },
 
   update: function(params){
+    console.log( 'update', params)
     for(const key in params){
-      console.log({key, params})
       if(this.hasOwnProperty(key)){
         this[key] = params[key];
       } else {
         throw new Error(`State has no key ${key} in ${params} for ${this}`);
       }
     }
+    console.log('after update', this)
   },
 
   getValues: function(){
     const keys = Object.keys(this);
     return keys.filter( key => typeof this[key] !== 'function');
+  },
+
+  serverMap: function({gain, stop_time, a_frequency}) {
+    return {
+      gainValue: gain,
+      stopTime: stop_time,
+      A: a_frequency
+    }
   }
 
 };

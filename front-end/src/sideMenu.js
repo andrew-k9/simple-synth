@@ -29,26 +29,38 @@
 const openNav = () => document.getElementById("mySidenav").style.width = "250px";
 const closeNav = () => document.getElementById("mySidenav").style.width = "0";
 
-const Category = ({id, name}) => {
-  const component = document.createElement('a');
-  component.id = id;
+const UserSetting = ({id, name}) => {
+  console.log({id, name})
+  const component = document.createElement('p');
+  component.className = 'setting-list-item';
   component.innerHTML = name;
+  component.addEventListener('click', updateStateFromServerById(id));
   return component;
 }
 
-const populateMenu = () => {
+const Category = ({id, name, settings}) => {
+  const component = document.createElement('a');
+  component.id = `category-${id}`;
+  component.innerHTML = name;
+  settings.forEach( s => component.appendChild(UserSetting(s)) );
+  return component;
+}
+
+const updateStateFromServerById = (id) => (event) => {
+  req({
+    routeName: `settings/${id}`,
+    type: 'GET',
+    callback: (res) => {
+      KEYBOARD_STATE.update(KEYBOARD_STATE.serverMap(res));
+      addKeyboard();
+    }
+  });
+}
+
+const addSideMenu = () => {
   req({
     routeName: 'categories',
     type: 'GET',
     callback: (resArray) => resArray.forEach( a => render(Category(a), 'mySidenav'))
   });
-}
-const addSideMenu = () => {
-  // for(let i = 0; i < 10; ++i){
-  //   const tmp = document.createElement('a');
-  //   const side = document.getElementById('mySidenav');
-  //   tmp.innerHTML = `iteration ${i + 1}`;
-  //   side.appendChild(tmp);
-  // }
-  populateMenu();
 }

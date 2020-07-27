@@ -19,6 +19,7 @@ const config = (type) => {
  */
 const req = ({routeName, type, callback}, body={}) => {
   const header = { ...config(type)};
+
   if (Object.keys(body).length > 0){
     header.body = body;
   }
@@ -26,6 +27,6 @@ const req = ({routeName, type, callback}, body={}) => {
   // console.log({ header, site, routeName, callback})
   fetch(`${SITE}/${routeName}`, header)
     .then( res => res.json() )
-    .then( json => callback(json) )
+    .then( json => callback(json))
     .catch( err => console.log({err, header, routeName, callback}));
 }

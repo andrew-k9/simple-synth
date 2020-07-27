@@ -11,6 +11,13 @@ class SettingsController < ApplicationController
     )
   end
 
+  def show
+    setting = Setting.find(params[:id])
+    render json: setting.to_json(
+        except: [:created_at, :updated_at]
+      )
+  end
+
   def create
     setting = Setting.create(setting_params)
     if setting.create
