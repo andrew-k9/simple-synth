@@ -2,7 +2,6 @@ const openNav = () => document.getElementById("mySidenav").style.width = "250px"
 const closeNav = () => document.getElementById("mySidenav").style.width = "0";
 
 const UserSetting = ({id, name}) => {
-  console.log({id, name})
   const component = document.createElement('p');
   component.className = 'setting-list-item';
   component.innerHTML = name;
@@ -24,6 +23,9 @@ const updateStateFromServerById = (id) => (event) => {
     type: 'GET',
     callback: (res) => {
       KEYBOARD_STATE.update(KEYBOARD_STATE.serverMap(res));
+      if(mainDiv()){
+        mainDiv().removeChild(keyboardDiv());
+      }
       addKeyboard();
     }
   });
@@ -33,6 +35,9 @@ const addSideMenu = () => {
   req({
     routeName: 'categories',
     type: 'GET',
-    callback: (resArray) => resArray.forEach( a => render(Category(a), 'mySidenav'))
+    callback: (resArray) => resArray.forEach( a => {
+      CATEGORY_STATE.mutate(a.name);
+      render(Category(a), 'mySidenav')
+    })
   });
 }

@@ -24,6 +24,7 @@ const SettingsPanel = (prop) => {
   textField.rows = 1;
   textField.cols = 20;
   textField.addEventListener('keydown', updateState(prop));
+  textField.value = KEYBOARD_STATE[prop];
   component.id = prop;
   component.className = 'settings-panel';
   component.innerHTML = `<p class="label">${prop}</p>`;
@@ -34,7 +35,6 @@ const SettingsPanel = (prop) => {
 const updateState = (prop) => (event) => {
   if(event.code === 'Enter'){
     event.preventDefault();
-    console.log(prop)
     const state = KEYBOARD_STATE;
     const tmp = {};
     tmp[prop] = parseFloat(event.target.value);

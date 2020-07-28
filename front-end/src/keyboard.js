@@ -60,6 +60,10 @@ const addKeyboard = () => {
 
 /**
  * Event Listener that makes a noise using the KEYBOARD_STATE object
+ * BUG: when increasing the number of 8ves from n->(n+m) the extra m 8ve
+ * keys do _not_ work! Possibly something with the `currentTime` being the same
+ * as the `baseLatency` but who can never be to sure?
+ *
  * @params {AudioContext} context - the audio context of the key
  * @params {number} frequency - the audio context of the key
  * @returns {function} anon function that interprets an audio context promise;
