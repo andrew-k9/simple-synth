@@ -39,7 +39,7 @@ const updateState = (prop) => (event) => {
     const tmp = {};
     tmp[prop] = parseFloat(event.target.value);
     state.update(tmp); // TODO: validation
-    document.body.removeChild(keyboardDiv());
+    mainDiv().removeChild(keyboardDiv());
     addKeyboard(); // redraw the keyboard with the given state settings
   }
 }
@@ -52,7 +52,7 @@ const addSynthSettings = () => {
   const props = state.getValues();
   const settings = SettingsArea({
     id: 'settings',
-    classes: ['primaryVariant']
+    classes: ['primaryVariant', 'main-stack']
   });
 
   props.forEach( prop => settings.appendChild(SettingsPanel(prop)) );

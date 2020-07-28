@@ -1,34 +1,38 @@
 const modalHTML = () => {
   const popup = document.createElement('div');
   popup.id = 'create-modal';
+  popup.className = 'main-stack';
   popup.innerHTML = `
-    <button id="myBtn">Open Modal</button>
-    <div id="myModal" class="modal">
+    <footer>
+      <button id="new-button">Create Setting</button>
+    </footer>
+    <div id="new-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <form action="/action_page.php">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" value="John"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Doe"><br><br>
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
   `;
-  document.body.appendChild(popup);
+  mainDiv().appendChild(popup);
 }
 
 const modal = () => {
-
   modalHTML();
-  const modal = document.getElementById("myModal");
-  const btn = document.getElementById("myBtn");
+  const modal = document.getElementById("new-modal");
+  const btn = document.getElementById("new-button");
   const span = document.getElementsByClassName("close")[0];
 
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  window.onclick = function(event) {
+  btn.addEventListener('click', () => modal.style.display = "flex");
+  span.addEventListener('click', () => modal.style.display = "none");
+  window.addEventListener('click', (event) => {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+  });
 }

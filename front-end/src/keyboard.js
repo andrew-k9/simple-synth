@@ -41,7 +41,7 @@ const addKeyboard = () => {
   const {A, octaves} = KEYBOARD_STATE;
   const keyboard = Keyboard({
     id: 'keyboard',
-    classes: ['primary'],
+    classes: ['primary', 'main-stack'],
   });
 
   // adds keyboard keys for the number of octaves

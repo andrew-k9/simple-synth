@@ -1,4 +1,5 @@
 const keyboardDiv = () => document.getElementById('keyboard');
+const mainDiv = () => document.getElementById('main');
 /**
  * Function that appends an html element identified by the given targetId
  *
