@@ -15,8 +15,8 @@ const render = (component, targetId) => {
 // sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
   KEYBOARD_STATE.init();
+  CATEGORY_STATE.init();
   addSynthSettings();
   addKeyboard();
   addSideMenu();
-  modal();
 });

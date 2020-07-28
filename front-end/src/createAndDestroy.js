@@ -3,11 +3,12 @@ const Form = () => {
   const state = KEYBOARD_STATE;
   const categories = CATEGORY_STATE;
 
-  form.innerHTML += `<label>Category</label><br><select name="category">`;
-  for(const key in categories){
-    form.innerHTTML = `<option value="${categories[key]}>${categories[key]}</option>`
-  }
-  form.innerHTML += '</select><br>'
+  let htmlstr = '';
+
+  htmlstr += `<select name="category">`;
+  categories.array.forEach( a => htmlstr += `<option value="${a}">${a}</option>` );
+  htmlstr += `</select><br>`;
+  form.innerHTML = htmlstr;
 
   for(const key in state){
     const name = state.toServerColumns(key);
@@ -15,7 +16,7 @@ const Form = () => {
       form.innerHTML += `
         <label for="${name}">${name}</label><br>
         <input readonly type="text" id="${name}" class="form-input" name="${name}" value="${state[key]}"><br>
-      `
+      `;
     }
   }
 
@@ -47,7 +48,8 @@ const submitForm = (event) => {
     val[x.name] = x.value;
     return val;
    });
-  console.log({values})
+  values.push({category: event.target['0'].value});
+  console.log(Object.assign(...values))
   event.preventDefault();
 }
 

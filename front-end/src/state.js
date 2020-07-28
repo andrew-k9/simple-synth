@@ -50,7 +50,11 @@ const KEYBOARD_STATE = {
 };
 
 const CATEGORY_STATE = {
-  mutate: function({name, value}){
-    this[name] = value;
-  }
+  init: function(){
+    this.array = [];
+  },
+
+  mutate: function(name){
+    this.array.push(name)
+  },
 }

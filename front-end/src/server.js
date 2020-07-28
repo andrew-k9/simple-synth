@@ -24,9 +24,10 @@ const req = ({routeName, type, callback}, body={}) => {
     header.body = body;
   }
 
-  // console.log({ header, site, routeName, callback})
-  fetch(`${SITE}/${routeName}`, header)
-    .then( res => res.json() )
-    .then( json => callback(json))
-    .catch( err => console.log({err, header, routeName, callback}));
+  return new Promise( (resolve, reject) => {
+    fetch(`${SITE}/${routeName}`, header)
+      .then( res => res.json() )
+      .then( json => resolve(callback(json)))
+      .catch( err => reject({err, header, routeName, callback}));
+  });
 }

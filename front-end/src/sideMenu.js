@@ -37,7 +37,9 @@ const addSideMenu = () => {
     type: 'GET',
     callback: (resArray) => resArray.forEach( a => {
       CATEGORY_STATE.mutate(a.name);
-      render(Category(a), 'mySidenav')
+      render(Category(a), 'mySidenav');
     })
-  });
+  })
+    .then( res =>modal() )
+    .catch( err => console.log(err));
 }
