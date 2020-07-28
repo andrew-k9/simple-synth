@@ -17,6 +17,14 @@ const Category = ({id, name, settings}) => {
   return component;
 }
 
+const appendNewSetting = ({category_id, setting_id, name}) => {
+  const cat = document.getElementById(`category-${category_id}`);
+  cat.appendChild(UserSetting({
+    id: setting_id,
+    name
+  }));
+}
+
 const updateStateFromServerById = (id) => (event) => {
   req({
     routeName: `settings/${id}`,

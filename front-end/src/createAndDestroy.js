@@ -5,6 +5,11 @@ const Form = () => {
 
   let htmlstr = '';
 
+  htmlstr += `
+        <label for="name">Name</label><br>
+        <input type="text" id="name" class="form-input" name="name" value="Name"><br>
+  `;
+
   htmlstr += `<select name="category">`;
   categories.array.forEach( a => htmlstr += `<option value="${a}">${a}</option>` );
   htmlstr += `</select><br>`;
@@ -43,14 +48,30 @@ const modalHTML = () => {
 }
 
 const submitForm = (event) => {
+  event.preventDefault();
   const values = [...document.getElementsByClassName('form-input')].map( x =>{
     const val = {}
     val[x.name] = x.value;
     return val;
    });
-  values.push({category: event.target['0'].value});
-  console.log(Object.assign(...values))
-  event.preventDefault();
+   const category_name = event.target['0'].value;
+  values.push({category: category_name});
+  const {gainValue, stopTime, A} = KEYBOARD_STATE;
+
+  req({
+    routeName: '/settings',
+    type: 'POST',
+    callback: appendNewSetting,
+    body: JSON.stringify({
+      setting: {
+        gain: gainValue,
+        stop_time: stopTime,
+        a_frequency: A,
+        category_name
+      }
+    })
+  })
+    .catch( err => console.log({err}))
 }
 
 const modal = () => {
