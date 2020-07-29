@@ -13,5 +13,8 @@ const render = (component, targetId) => {
 // TODO: make the functions that generate components into a generic function
 // sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
-  const state = KEYBOARD_STATE.init();
+  KEYBOARD_STATE.init();
+  CATEGORY_STATE.init();
+
+  addCategories();
 });

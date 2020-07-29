@@ -3,7 +3,7 @@ const CATEGORY_STATE = {
     this.array = [];
   },
 
-  mutate: function(name){
+  add: function(name){
     this.array.push(name)
   },
 

@@ -14,10 +14,9 @@ const config = (type) => {
  *
  * @param {string} routeName - route name _not_ starting w/ slash
  * @param {string} type - GET, POST, PATCH, DELETE
- * @param {requestCallback} callback - callback that takes the JSON object as an argument
  * @param {Object} body - for POST and PATCH requests
  */
-const request = ({routeName, type, callback}, body={}) => {
+const request = ({routeName, type}, body={}) => {
   const header = { ...config(type)};
 
   if (Object.keys(body).length > 0){
@@ -27,7 +26,7 @@ const request = ({routeName, type, callback}, body={}) => {
   return new Promise( (resolve, reject) => {
     fetch(`${SITE}/${routeName}`, header)
       .then( res => res.json() )
-      .then( json => resolve(callback(json)))
-      .catch( err => reject({err, header, routeName, callback}));
+      .then( json => resolve(json))
+      .catch( err => reject({err, header}));
   });
 }
