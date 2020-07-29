@@ -6,7 +6,7 @@ const getId = (name) => document.getElementById(name);
  * @param {string} targetId The id of the element in which the component will be rendered
  */
 const render = (component, targetId) => {
-  const target = document.getElementById(targetId);
+  const target = getId(targetId);
   target.appendChild(component);
 }
 
@@ -17,12 +17,41 @@ const component = ({type, id, classes}) => {
   return component;
 }
 
+const createOrUpdate = (e) => console.log(e);
+const deleteFromServer = (e) => console.log(e);
+
+const buttons = () => {
+  const container = getId('bottom-bar');
+  const save = document.createElement('button');
+  const remove = document.createElement('button');
+  const state = KEYBOARD_STATE;
+
+  container.innerHTML = '';
+  save.id = 'save';
+  save.innerHTML = 'save';
+  save.addEventListener('click', createOrUpdate);
+  remove.id = 'delete';
+  remove.innerHTML = 'delete';
+  remove.addEventListener('click', deleteFromServer);
+
+  if(state.id === '' && state.category_id === ''){
+    container.appendChild(save);
+  } else {
+    container.appendChild(save);
+    container.appendChild(remove);
+  }
+}
+
 // TODO: make the functions that generate components into a generic function
 // sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
   KEYBOARD_STATE.init();
   CATEGORY_STATE.init();
 
-  addCategories();
-  addSettings();
+  addCategories()
+    .then( res =>{
+      addSettings();
+      buttons();
+    })
+    .catch(err => alert(err));
 });
