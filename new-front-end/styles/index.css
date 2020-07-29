@@ -1,0 +1,26 @@
+/* main content */
+
+#main-content-flex {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+/* main components */
+
+#category-select {
+
+}
+
+#settings {
+
+}
+
+#keyboard {
+
+}
+
+#bottom-bar {
+
+}

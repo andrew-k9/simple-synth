@@ -19,6 +19,7 @@ class SettingsController < ApplicationController
   end
 
   def create
+    raise params
     setting = Setting.create(setting_params)
     if setting.create
       render json: setting.to_json(
@@ -48,6 +49,6 @@ class SettingsController < ApplicationController
 private
 
   def setting_params
-    params.require(:setting).permit(:name, :gain, :stop_time, :a_frequency, :category_id)
+    params.require(:setting).permit(:name, :gain, :stop_time, :a_frequency, :category_name)
   end
 end
