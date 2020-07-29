@@ -16,7 +16,7 @@ const KEYBOARD_STATE = {
   },
 
   // updates state then propagates to each of the props
-  update: function(params){
+  update: function(params={}){
     for(const key in params){
       if(this.hasOwnProperty(key + '')){
         this[key] = params[key];
@@ -42,4 +42,9 @@ const KEYBOARD_STATE = {
     const keys = Object.keys(this);
     return keys.filter( key => typeof this[key] !== 'function');
   },
+
+  clear: function(){
+    this.getProps().forEach( prop => this[prop] = "");
+    this.update();
+  }
 };

@@ -28,7 +28,7 @@ const CategorySelect = (categories) => {
     }else{
       const p = document.createElement('p');
       p.innerHTML = category.name;
-      categoryContainer.appendChild(p)
+      categoryContainer.appendChild(p);
     }
   });
   return categoryContainer;
