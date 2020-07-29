@@ -3,9 +3,9 @@ const KEYBOARD_STATE = {
   stop_time: null,
   octaves: null,
   a_frequency: null,
-  id: null,
-  category_id: null,
-  name: null,
+  id: "",
+  category_id: "",
+  name: "",
 
   init: function(){
     this.gain = 0.05;
@@ -29,7 +29,9 @@ const KEYBOARD_STATE = {
     // update state for all html elements with a prop classname
     this.getProps().forEach( propName =>
       [...document.getElementsByClassName(propName)]
-      .forEach( prop => prop.innerHTML = (this[propName] + ''))
+        .forEach( prop =>
+          prop.innerHTML === "" ? prop.value = (this[propName] + '') : prop.innerHTML = (this[propName] + '')
+        )
     );
   },
 

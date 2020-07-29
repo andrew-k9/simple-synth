@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="./styles/colors.css" type="text/css">
     <script type="application/javascript" src="./src/index.js" charset="UTF-8"></script>
     <script type="application/javascript" src="./src/server/server.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="./src/settings/settings.js" charset="UTF-8"></script>
     <script type="application/javascript" src="./src/keyboard/state.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="./src/keyboard/keyboard.js" charset="UTF-8"></script>
     <script type="application/javascript" src="./src/categorySelect/state.js" charset="UTF-8"></script>
     <script type="application/javascript" src="./src/categorySelect/categorySelect.js" charset="UTF-8"></script>
     <title>Simple Synth</title>
@@ -14,9 +16,9 @@
   <body class="background">
     <h1 class="primaryVariantText">Keyboard</h1>
     <div id="main-content-flex" class="primary">
-      <div id="category-select"></div>
-      <div id="settings"></div>
-      <div id="keyboard"></div>
+      <div id="category-select" class="primaryVariant"></div>
+      <div id="settings" class="secondary"></div>
+      <div id="keyboard" class="primaryVariant"></div>
       <div id="bottom-bar" class="secondary">
         <button id="save" class="button">Save Changes</button>
         <button id="delete" class="button">Delete</button>

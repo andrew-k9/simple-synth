@@ -10,6 +10,13 @@ const render = (component, targetId) => {
   target.appendChild(component);
 }
 
+const component = ({type, id, classes}) => {
+  const component = document.createElement(type);
+  component.id = id;
+  component.classList.add(...classes);
+  return component;
+}
+
 // TODO: make the functions that generate components into a generic function
 // sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
   CATEGORY_STATE.init();
 
   addCategories();
+  addSettings();
 });
