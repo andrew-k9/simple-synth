@@ -3,6 +3,9 @@ const KEYBOARD_STATE = {
   stop_time: null,
   octaves: null,
   a_frequency: null,
+  id: null,
+  category_id: null,
+  name: null,
 
   init: function(){
     this.gain = 0.05;
@@ -14,11 +17,12 @@ const KEYBOARD_STATE = {
 
   // updates state then propagates to each of the props
   update: function(params){
+    console.log(params)
     for(const key in params){
-      if(this.hasOwnProperty(key)){
+      if(this.hasOwnProperty(key + '')){
         this[key] = params[key];
       } else {
-        throw new Error(`State has no key ${key} in ${params} for ${this}`);
+        throw new Error(`State has no key ${key} in ${JSON.stringify(params)} for ${JSON.stringify(this)}`);
       }
     }
 

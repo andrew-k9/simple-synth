@@ -1,9 +1,10 @@
-
-const Selector = (settings) => {
+const Selector = (settings, name) => {
   const selector = document.createElement('select');
+  selector.className = name;
   settings.forEach( setting => {
     const option = document.createElement('option');
-    option.id = setting.name;
+    option.className = setting.name;
+    option.id = `setting-${setting.id}`;
     option.innerHTML = setting.name;
     selector.appendChild(option);
   });
@@ -14,15 +15,32 @@ const CategorySelect = (categories) => {
   const categoryContainer = document.createElement('div');
   categoryContainer.id = 'category-container';
   categories.forEach( category => {
-    const div = document.createElement('div');
-    div.id = category.name;
-    div.innerHTML = category.name;
-    if(category.settings.length > 0){
-      div.appendChild(Selector(category.settings));
+    const {settings, name} = category;
+    // no settings is just a p tag, settings are a form
+    if(settings.length > 0){
+      const form = document.createElement('form');
+      form.innerHTML = name;
+      form.appendChild(Selector(settings, name));
+      form.innerHTML += `<input type="submit" value="Use Setting">`;
+      form.addEventListener('submit', submitForm);
+      categoryContainer.appendChild(form)
+    }else{
+      const p = document.createElement('p');
+      p.innerHTML = category.name;
+      categoryContainer.appendChild(p)
     }
-    categoryContainer.appendChild(div);
   });
   return categoryContainer;
+}
+
+const submitForm = (event) => {
+  const id = event.target[0].children[0].id.split('-')[1];
+
+  request({routeName: `settings/${id}`,type: 'GET'})
+    .then( res => KEYBOARD_STATE.update(res))
+    .catch( err => console.log(err));
+
+  event.preventDefault();
 }
 
 const initSelector = (categories) => {
