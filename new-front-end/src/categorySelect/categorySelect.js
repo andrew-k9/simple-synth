@@ -7,7 +7,7 @@
  */
 const Selector = (settings, name) => {
   const selector = document.createElement('select');
-  selector.className = name;
+  selector.className = `form-control`;
   settings.forEach( setting => {
     const option = document.createElement('option');
     option.className = setting.name;
@@ -52,8 +52,8 @@ const CategorySelect = (categories) => {
  * @param {Object} event - event from event listener
  */
 const submitForm = (event) => {
-  const id = event.target[0].children[0].id.split('-')[1];
-
+  event.preventDefault();
+  const id = [...event.target[0].children].filter( x => x.selected)[0].id.split('-')[1];
   request({routeName: `settings/${id}`,type: 'GET'})
     .then( res => {
       KEYBOARD_STATE.update(res);

@@ -5,16 +5,17 @@
   flex-direction: column;
   flex: 1;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* main components */
 
-#category-select {
-
+#category-container{
 }
 
-#settings {
-
+#settings-container{
+  display: flex;
+  flex-direction: row;
 }
 
 #keyboard {
