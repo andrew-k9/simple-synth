@@ -24,8 +24,7 @@ const updateState = (prop) => (event) => {
     event.preventDefault();
     const state = KEYBOARD_STATE;
     const obj = {};
-    console.log(obj)
-    obj[prop] = parseInt(event.target.value);
+    obj[prop] = event.target.value;
     state.update(obj);
   }
 }
