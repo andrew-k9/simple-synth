@@ -20,7 +20,6 @@ const KEYBOARD_STATE = {
     for(const key in params){
       if(this.hasOwnProperty(key + '')){
         this[key] = params[key];
-        console.log(this[key], 'dsads')
       } else {
         throw new Error(`State has no key ${key} in ${JSON.stringify(params)} for ${JSON.stringify(this)}`);
       }

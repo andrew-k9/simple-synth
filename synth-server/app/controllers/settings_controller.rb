@@ -1,3 +1,5 @@
+require 'pry'
+
 class SettingsController < ApplicationController
   def index
     settings = Setting.all
@@ -19,9 +21,8 @@ class SettingsController < ApplicationController
   end
 
   def create
-    raise params
     setting = Setting.create(setting_params)
-    if setting.create
+    if setting
       render json: setting.to_json(
         except: [:created_at, :updated_at]
       )
@@ -31,7 +32,8 @@ class SettingsController < ApplicationController
   end
 
   def update
-    setting = Setting.find(params[:id])
+    setting = Setting.find(params[:setting][:id])
+    params.delete(:id)
     if setting.update(setting_params)
       render json: setting.to_json(
         except: [:created_at, :updated_at]
@@ -44,11 +46,12 @@ class SettingsController < ApplicationController
   def destroy
     setting = Setting.find(params[:id])
     setting.destroy
+    render json: { msg: "deleted" }
   end
 
 private
 
   def setting_params
-    params.require(:setting).permit(:name, :gain, :stop_time, :a_frequency, :category_name)
+    params.require(:setting).permit(:id, :name, :gain, :stop_time, :a_frequency, :category_id)
   end
 end

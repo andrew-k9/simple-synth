@@ -15,15 +15,35 @@ const createOrUpdate = (e) => {
       }
     }
     body.category_id = parseInt(id);
+    request({routeName, type}, JSON.stringify(body))
+      .then( res => {
+        // I don't like the solution, but don't have time to undo...
+        const container = getId('category-select');
+        container.innerHTML = '';
+        addCategories()
+          .then( res => state.update(res))
+          .catch( err => console.log(err));
+      })
+      .catch( err => console.log(err));
   }
 
-  console.log({routeName, type}, body)
-  request({routeName, type}, JSON.stringify(body))
-    .then( res => console.log(res))
-    .catch( err => console.log(err));
-
 };
-const deleteFromServer = (e) => console.log(e);
+const deleteFromServer = (e) => {
+  const id = parseInt(getId('id').children[1].value);
+  // could extract this...
+  request({routeName: `settings/${id}`, type: 'DELETE'})
+    .then( res => {
+      const container = getId('category-select');
+      container.innerHTML = '';
+      addCategories()
+        .then( res => {
+          KEYBOARD_STATE.clear();
+          KEYBOARD_STATE.update({});
+        })
+        .catch( err => console.log(err));
+    })
+    .catch( err => console.log(err));
+}
 
 const buttons = () => {
   const container = getId('bottom-bar');
