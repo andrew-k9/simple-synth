@@ -1,4 +1,6 @@
+// shorthand for `document.getElementById(name)`
 const getId = (name) => document.getElementById(name);
+
 /**
  * Function that appends an html element identified by the given targetId
  *
@@ -10,6 +12,12 @@ const render = (component, targetId) => {
   target.appendChild(component);
 }
 
+/**
+ * Function that creates a general component
+ *
+ * @param {HTMLElement} component The component created off of some data
+ * @param {string} targetId The id of the element in which the component will be rendered
+ */
 const component = ({type, id, classes}) => {
   const component = document.createElement(type);
   component.id = id;
@@ -17,8 +25,6 @@ const component = ({type, id, classes}) => {
   return component;
 }
 
-// TODO: make the functions that generate components into a generic function
-// sets up the DOM on load with default values
 document.addEventListener('DOMContentLoaded', () => {
   KEYBOARD_STATE.init();
   CATEGORY_STATE.init();

@@ -1,3 +1,10 @@
+/**
+ * Function that creates a selector dropdown for settings
+ *
+ * @param {[Object]} settings - array of setting objects
+ * @param {string} name - name of the category
+ * @returns {HTMLElement} HTML selector
+ */
 const Selector = (settings, name) => {
   const selector = document.createElement('select');
   selector.className = name;
@@ -11,6 +18,11 @@ const Selector = (settings, name) => {
   return selector;
 }
 
+/**
+ * Function that lists all the categories
+ *
+ * @param {[String]} categories - list of category names
+ */
 const CategorySelect = (categories) => {
   const categoryContainer = document.createElement('div');
   categoryContainer.id = 'category-container';
@@ -34,6 +46,11 @@ const CategorySelect = (categories) => {
   return categoryContainer;
 }
 
+/**
+ * Function that gets the setting info from the server
+ *
+ * @param {Object} event - event from event listener
+ */
 const submitForm = (event) => {
   const id = event.target[0].children[0].id.split('-')[1];
 
