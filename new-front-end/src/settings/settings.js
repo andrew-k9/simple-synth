@@ -1,3 +1,12 @@
+const userFriendlyName = {
+  gain: 'Gain',
+  stop_time: 'Note Duration',
+  a_frequency: 'A Frequency',
+  category_id: 'Category',
+  name: 'Setting Name',
+  id: 'ID (un-editable)'
+}
+
 const SettingsOption = (prop) => {
   const component = document.createElement('div');
   let textField = document.createElement('textarea');
@@ -6,7 +15,7 @@ const SettingsOption = (prop) => {
   }else{
     textField.rows = 1;
     textField.cols = 20;
-    textField.className = prop;
+    textField.className = `${prop} form-control`;
     if(prop === 'id'){
       textField.readOnly = true;
     }
@@ -14,7 +23,8 @@ const SettingsOption = (prop) => {
     textField.value = KEYBOARD_STATE[prop];
   }
   component.id = prop;
-  component.innerHTML = `<p class="label">${prop}</p>`;
+  component.innerHTML = `<p class="label">${userFriendlyName[prop]}</p>`;
+  component.className = 'settings-item';
   component.appendChild(textField);
   return component;
 }
@@ -37,7 +47,6 @@ const addSettings = () => {
     id: 'settings-container',
     classes: ['settings'],
   });
-  component.innerHTML = '<h1>Settings</h1>'
-  props.forEach( prop => settings.appendChild(SettingsOption(prop)) );
+  props.forEach( prop => prop !== 'octaves' ? settings.appendChild(SettingsOption(prop)) : console.log(prop));
   render(settings, 'settings');
 }

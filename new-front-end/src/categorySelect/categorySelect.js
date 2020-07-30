@@ -7,7 +7,7 @@
  */
 const Selector = (settings, name) => {
   const selector = document.createElement('select');
-  selector.className = name;
+  selector.className = `form-control`;
   settings.forEach( setting => {
     const option = document.createElement('option');
     option.className = setting.name;
@@ -33,12 +33,14 @@ const CategorySelect = (categories) => {
     if(settings.length > 0){
       const form = document.createElement('form');
       form.innerHTML = name;
+      form.className = 'card category-card';
       form.appendChild(Selector(settings, name));
-      form.innerHTML += `<input type="submit" value="Use Setting">`;
+      form.innerHTML += `<input type="submit" class="btn btn-secondary" value="Use Setting">`;
       form.addEventListener('submit', submitForm);
       categoryContainer.appendChild(form);
     }else{
       const p = document.createElement('p');
+      p.className = 'card';
       p.innerHTML = category.name;
       categoryContainer.appendChild(p);
     }
@@ -52,8 +54,8 @@ const CategorySelect = (categories) => {
  * @param {Object} event - event from event listener
  */
 const submitForm = (event) => {
-  const id = event.target[0].children[0].id.split('-')[1];
-
+  event.preventDefault();
+  const id = [...event.target[0].children].filter( x => x.selected)[0].id.split('-')[1];
   request({routeName: `settings/${id}`,type: 'GET'})
     .then( res => {
       KEYBOARD_STATE.update(res);
@@ -65,7 +67,7 @@ const submitForm = (event) => {
 
 const initSelector = (categories) => {
   const element = getId('category-select');
-  element.innerHTML = `<h1>Categories</h1>`;
+  element.innerHTML = `<h1 class="display-5 text-light">Categories</h1>`;
   element.appendChild(CategorySelect(categories));
 }
 

@@ -53,6 +53,7 @@ const buttons = () => {
   container.innerHTML = '';
   save.id = 'save';
   save.innerHTML = 'save';
+  save.className = 'btn btn-secondary item';
   save.addEventListener('click', createOrUpdate);
 
   if(state.id === '' && state.category_id === ''){
@@ -63,9 +64,11 @@ const buttons = () => {
 
     news.id = 'new';
     news.innerHTML = 'new';
+    news.className = 'btn btn-secondary item';
     news.addEventListener('click', state.clear.bind(state));
     remove.id = 'delete';
     remove.innerHTML = 'delete';
+    remove.className = 'btn btn-secondary item';
     remove.addEventListener('click', deleteFromServer);
 
     container.appendChild(save);

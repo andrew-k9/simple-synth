@@ -23,8 +23,6 @@ const request = ({routeName, type}, body={}) => {
     header.body = body;
   }
 
-  console.log(header)
-
   return new Promise( (resolve, reject) => {
     fetch(`${SITE}/${routeName}`, header)
       .then( res => res.json() )
