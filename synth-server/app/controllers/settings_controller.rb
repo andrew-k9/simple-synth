@@ -2,11 +2,11 @@ class SettingsController < ApplicationController
   def index
     settings = Setting.all
     render json: settings.as_json(
-      only: [:id, :name, :gain, :stop_time, :a_frequency],
+      only: %i[id name gain stop_time a_frequency],
       include: {
         category: {
-          only: [:id, :name]
-        }
+          only: %i[id name],
+        },
       }
     )
   end
@@ -14,15 +14,15 @@ class SettingsController < ApplicationController
   def show
     setting = Setting.find(params[:id])
     render json: setting.to_json(
-        except: [:created_at, :updated_at]
-      )
+      except: %i[created_at updated_at]
+    )
   end
 
   def create
     setting = Setting.create(setting_params)
     if setting
       render json: setting.to_json(
-        except: [:created_at, :updated_at]
+        except: %i[created_at updated_at]
       )
     else
       render json: { errors: setting.errors }
@@ -34,7 +34,7 @@ class SettingsController < ApplicationController
     params.delete(:id)
     if setting.update(setting_params)
       render json: setting.to_json(
-        except: [:created_at, :updated_at]
+        except: %i[created_at updated_at]
       )
     else
       render json: { msg: "unable to update #{setting.name}" }

@@ -14,9 +14,6 @@ AllCops:
     - 'synth-server/config/**/*'
     - 'synth-server/bin/**'
     - 'synth-server/node_modules/**/*'
-    - 'synth-server/Gemfile'
-    - 'synth-server/Rakefile'
-    - 'synth-server/test/**'
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent

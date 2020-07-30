@@ -2,11 +2,11 @@ class CategoriesController < ApplicationController
   def index
     categories = Category.all
     render json: categories.as_json(
-      only: [:id, :name],
+      only: %i[id name],
       include: {
         settings: {
-          only: [:name, :id]
-        }
+          only: %i[name id],
+        },
       }
     )
   end
