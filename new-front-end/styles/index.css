@@ -1,5 +1,9 @@
 /* main content */
 
+textarea {
+  resize: none;
+}
+
 #main-content-flex {
   display: flex;
   flex-direction: column;
@@ -11,15 +15,44 @@
 /* main components */
 
 #category-container{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #settings-container{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+#settings {
+  margin: 5px;
+  border-radius: 10px;
+}
+
+#category-select{
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+.category-card {
+  flex: 1;
+  margin: 10px;
+}
+
+.item {
+  margin: 10px;
+}
+
+.settings-item {
+  margin: 5px;
 }
 
 #keyboard {
-
+  border: 10px;
+  border-radius: 10px;
 }
 
 #bottom-bar {
