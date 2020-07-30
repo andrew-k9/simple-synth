@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addCategories()
     .then( res =>{
       addSettings();
+      addKeyboard();
       buttons();
     })
     .catch(err => alert(err));

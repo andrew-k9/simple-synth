@@ -24,3 +24,20 @@
 #bottom-bar {
 
 }
+
+#synth {
+  flex: 1;
+  order: 2;
+  display: flex;
+  height: 250px;
+  width: 1000px;
+}
+
+.pianoKey {
+  flex: 1;
+  height: 100%;
+  width: 5%;
+  border-color: #BB86FC;
+  border-style: solid;
+  border-width: 2px;
+}
